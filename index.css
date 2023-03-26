@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #f6f7fb 0%, #f1f1fc 100%);
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  width: 24rem;
+  height: 42.56rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+/* Navbar Section */
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.9rem 0.6rem;
+  align-items: center;
+}
+
+nav > img {
+  height: 2rem;
+  cursor: pointer;
+}
+
+.logo {
+  height: 2.5rem;
+}
+
+/* Photo Section */
+.dog-photo-card-div {
+  position: relative;
+  color: #f8f8f8;
+  aspect-ratio: 53 / 75;
+}
+
+.dog-photo-card {
+  width: 100%;
+  background-size: cover;
+  border-radius: 1rem;
+}
+
+.status-img {
+  position: absolute;
+  width: 12.5rem;
+  height: 6rem;
+  left: 1rem;
+  top: 3rem;
+  transform: rotate(-30deg);
+}
+
+.dog-card-text {
+  margin: 1rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.dog-card-text h1,
+p {
+  margin: 0;
+  line-height: 1.35em;
+}
+
+.dog-card-text p {
+  color: #b7b7b7;
+  font-size: 1.2rem;
+}
+
+.dog-card-text h1 {
+  font-size: 2rem;
+}
+
+/* Rate Buttons */
+.rate,
+.rate-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rate {
+  height: 4.75rem;
+  gap: 1.2em;
+}
+
+.rate-btn {
+  cursor: pointer;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.rate-btn > img {
+  height: 1.4rem;
+  padding: 1.11rem;
+}
+
+.nope-btn.active,
+.nope-btn:hover,
+.nope-btn:focus {
+  background: #ffe7ef;
+}
+
+.like-btn.active,
+.like-btn:hover,
+.like-btn:focus {
+  background: #dbfff4;
+}
