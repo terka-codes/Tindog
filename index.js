@@ -25,13 +25,12 @@ function addDog() {
                 <h1 class="alert-no-more-dogs">Dogs you matched with: 🐶</h1>
                 ${renderMatchedDogsHtml()}
             </div>`
-        document.getElementById("rate-btns").innerHTML = ""
+        document.getElementById("rate-btns").remove()
     }
 }
 
 function renderMatchedDogsHtml() {
     const matchedDogsHtml = []
-    console.log(dogs)
   
     for (let i = 0; i < dogs.length; i++) {
         let doggie = new Dogs(dogs[i])
