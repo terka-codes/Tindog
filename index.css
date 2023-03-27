@@ -114,3 +114,10 @@ p {
 .like-btn:focus {
   background: #dbfff4;
 }
+
+/* Ending alert */
+.alert-no-more-dogs {
+  text-align: center;
+  margin: 0;
+  padding: 61.5% 10%;
+}
