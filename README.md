@@ -1,21 +1,14 @@
-# coa45497785440b417ee37b1c
+# Dog Matchmaking App
+This is a web application that allows users to rate and match with dogs. Users can clisk the swipe (Nope) button or Like button under the dog cards that are displayed on the screen. If a user Likes a dog and the dog, then the dog will be added to the list of dogs that the user has matched with.
 
-Quick start:
+## Take a look at the project
 
-```
-$ npm install
-$ npm start
-````
+👉[LIVE SITE HERE](https://sprightly-toffee-4f1ce1.netlify.app/)👈
 
-Head over to https://vitejs.dev/ to learn more about using vite
-## About Scrimba
+https://user-images.githubusercontent.com/107133029/227925723-bb32115c-b35b-4837-b659-80bb4f8d25ca.mov
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+## How it Works
+The application uses JavaScript and the Document Object Model (DOM) to manipulate the HTML and CSS on the web page. The Dog.js module defines the Dogs class, which represents a dog and its properties. The data.js module contains an array of dog objects, which are used to create instances of the Dogs class.
 
-Happy Coding!
+The index.js module contains the main logic of the application. It keeps track of the current dog being shown and updates the HTML and CSS when the user rates a dog. If the user Likes a dog and the dog also Likes the user back, the dog object is updated to indicate that it has been matched with the user. The application also uses setTimeout to delay showing the next dog card after the user rates a dog.
