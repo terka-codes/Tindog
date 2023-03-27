@@ -29,18 +29,25 @@ function addDog() {
     }
 }
 
+// This function returns an HTML string that represents a list of dogs that have been liked by the user
 function renderMatchedDogsHtml() {
+    // Create an empty array to store the HTML strings for the matched dogs
     const matchedDogsHtml = []
   
+    // Loops through the array of dogs data
     for (let i = 0; i < dogs.length; i++) {
+        // Create a new Dogs object for each dog in the array
         let doggie = new Dogs(dogs[i])
+        // If the dog has been liked by the user, get its HTML string and add it to the matchedDogsHtml array
         if (doggie.hasBeenLiked) {
             matchedDogsHtml.push(doggie.getMatchedDogsHtml())
         }
     }
   
+    // If there are matched dogs, join the HTML strings in the array and return it as a single string
     if (matchedDogsHtml.length > 0) {
         return matchedDogsHtml.join('')
+    // If there are no matched dogs, return a default HTML string
     } else {
         return '<p>No dog matches 😢</p>'
     }
