@@ -5,7 +5,7 @@ class Dogs {
     }
     getDogsHtml() {
         // extract the properties we need from the current dog object
-        const {name, avatar, age, bio, hasBeenSwiped, hasBeenLiked } = this
+        const {name, avatar, age, bio} = this
 
         // create a "Like" badge if the dog has been liked
         const liked = this.hasBeenLiked ? 
@@ -17,7 +17,7 @@ class Dogs {
             : ""
         
         // create the HTML for the dog photo card using the extracted properties and the created badges
-        return dogHtml = `
+        const dogHtml = `
             <div class="dog-photo-card-div">
                 <img class="dog-photo-card" src="${avatar}">
                 ${liked}
@@ -27,6 +27,25 @@ class Dogs {
                     <p>${bio}</p>
                 </div>
             </div>`
+        
+        return dogHtml
+    }
+
+    getMatchedDogsHtml() {
+        // extract the properties we need from the current dog object
+        const {name, avatar, age, bio} = this
+
+        // create the HTML for the dog photo card using the extracted properties and the created badges
+        const matchedDogHtml = `
+            <div class="dog-card-matched">
+                <img class="dog-photo-matched" src="${avatar}">
+                <div class="dog-matched-text">
+                    <h1>${name}, ${age}</h1>
+                    <p>${bio}</p>
+                </div>
+            </div>`
+        
+        return matchedDogHtml
     }
 }
 

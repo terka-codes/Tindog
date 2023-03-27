@@ -21,8 +21,29 @@ function addDog() {
     } else {
         // If there are no more dogs left, show an alert message and remove the buttons
         document.getElementById("main-img").innerHTML = `
-            <h1 class="alert-no-more-dogs">There are no more dogs to show you 🐶</h1>`
+            <div class="matched-dogs-div">
+                <h1 class="alert-no-more-dogs">Dogs you matched with: 🐶</h1>
+                ${renderMatchedDogsHtml()}
+            </div>`
         document.getElementById("rate-btns").innerHTML = ""
+    }
+}
+
+function renderMatchedDogsHtml() {
+    const matchedDogsHtml = []
+    console.log(dogs)
+  
+    for (let i = 0; i < dogs.length; i++) {
+        let doggie = new Dogs(dogs[i])
+        if (doggie.hasBeenLiked) {
+            matchedDogsHtml.push(doggie.getMatchedDogsHtml())
+        }
+    }
+  
+    if (matchedDogsHtml.length > 0) {
+        return matchedDogsHtml.join('')
+    } else {
+        return '<p>No dog matches 😢</p>'
     }
 }
 
@@ -40,6 +61,7 @@ function handleRateBtnClick(whatsClicked, oppositeOne, button, oppositeButton) {
 
     // Toggle the state of the clicked button
     dog[whatsClicked] = !dog[whatsClicked]
+    dogs[dogsCounter][whatsClicked] = !dogs[dogsCounter][whatsClicked]
     render()
 
     // Toggle the "active" class for the clicked button and remove it from the opposite button

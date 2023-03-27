@@ -119,5 +119,30 @@ p {
 .alert-no-more-dogs {
   text-align: center;
   margin: 0;
-  padding: 61.5% 10%;
+  padding: 8%;
+}
+
+/* Dogs Matched Area */
+.matched-dogs-div {
+  height: 37em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6em;
+  text-align: center;
+}
+
+.dog-card-matched {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dog-photo-matched {
+  height: 8em;
+  border-radius: 1rem;
 }
